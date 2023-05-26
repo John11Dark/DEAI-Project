@@ -1,33 +1,30 @@
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import Input from "../../forms/input";
-import Button from "../../utils/button";
 import Icon from "../../utils/icon";
+import Input from "../input";
 import Select from "../select";
 import TextArea from "../textArea";
+import CountryCodeSelect from "../countryCodeSelect";
 
-export default function ContactForm() {
+export default function ResetPassword() {
   const validationSchema = Yup.object({
-    firstName: Yup.string().required("First Name is required"),
-    lastName: Yup.string().required("Last Name is required"),
+    email: Yup.string().email("Invalid email address"),
+    countryCode: Yup.string().matches(/^\d{3}$/, "Invalid country code"),
+    phoneNumber: Yup.string().matches(
+      /^\d{3}-\d{3}-\d{4}$/,
+      "Invalid phone number"
+    ),
+    username: Yup.string()
+      .min(2, "Must be at least 2 characters")
+      .max(15, "Must be 15 characters or less")
+      .required("Required"),
   });
 
-  type TopicOption = {
-    index: number;
-    value: string;
-    option: string;
-  };
-  const topicOptions: TopicOption[] = [
-    { index: 0, value: "topic", option: "Topic" },
-    { index: 1, value: "topic1", option: "Topic 1" },
-    { index: 2, value: "topic2", option: "Topic 2" },
-    { index: 3, value: "topic3", option: "Topic 3" },
-  ];
   const initialValues = {
-    fullName: "",
     email: "",
-    message: "",
-    topic: topicOptions[0],
+    phoneNumber: "",
+    username: "",
+    countryCode: countryCodeOptions[0],
   };
 
   const handleSubmit = (
@@ -47,12 +44,11 @@ export default function ContactForm() {
     >
       <Form className="contact-form">
         <Input name="firstName" label="First Name" id="firstName" type="text" />
-        <Select
-          name="topic"
-          label="Topic"
-          id="topic"
-          options={topicOptions}
-          title="Topic"
+        <CountryCodeSelect
+          name="countryCode"
+          label="Country Code"
+          id="countryCode"
+          title="country Code"
         />
         <Input name="email" label="Email" id="email" type="email" />
         <TextArea id="message" name="message" label="Message" />

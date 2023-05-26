@@ -24,6 +24,8 @@ export { default as Select } from "./forms/select";
 export { default as TextArea } from "./forms/textArea";
 export { default as Form } from "./forms/form";
 export { default as ContactForm } from "./forms/Forms/contactForm";
+export { default as RegisterForm } from "./forms/Forms/signup";
+export { default as LoginForm } from "./forms/Forms/login";
 
 // ? * Cards
 export { default as PlanCard } from "./Cards/planCard";

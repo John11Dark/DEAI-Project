@@ -14,10 +14,13 @@ import {
 } from "./screens";
 
 import { Main, Header } from "./Components";
-
+import { AuthProvider } from "./contexts/authContext";
 export default function App() {
-  return (
-    <>
+  return <Dashboard />;
+}
+
+/*
+<AuthProvider>
       <Header
         links={[
           {
@@ -47,18 +50,7 @@ export default function App() {
         ]}
       />
       <Main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/APIs" element={<APIs />} />
-          <Route path="/FQA" element={<FQA />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Docs" element={<Docs />} />
-          <Route path="/Register" element={<Register />} />
-        </Routes>
+        <Routes>{<Route path="/" element={<Home />} />}</Routes>
       </Main>
-    </>
-  );
-}
+    </AuthProvider>
+*/
