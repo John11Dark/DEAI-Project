@@ -5,12 +5,13 @@ export { default as About } from "./utils/about";
 export { default as APIs } from "./utils/apis";
 export { default as Docs } from "./utils/docs";
 export { default as Contact } from "./utils/contact";
+export { default as NotFound } from "./utils/notFound";
 
 // ? Auth
 export { default as Login } from "./auth/login";
 export { default as Register } from "./auth/register";
-// export { default as ForgotPassword } from "./auth/forgot-password";
-// export { default as ResetPassword } from "./auth/reset-password";
+export { default as ForgotPassword } from "./auth/forgotPassword";
 
 // ? Dashboard
 export { default as Dashboard } from "./dashboard/dashboard";
+export { default as Chat } from "./dashboard/Chat";
