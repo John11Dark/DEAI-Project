@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Button,
   Container,
@@ -9,22 +8,9 @@ import {
   ScrollDownIndicator,
   ContactForm,
 } from "../../Components";
-import Icon from "../../Components/utils/icon";
-import colors from "../../styles/colors";
-import TextArea from "../../Components/forms/textArea";
-import Select from "../../Components/forms/select";
 import UnderlineKeyword from "../../Components/content/underlineKeyword";
 
 export default function Home() {
-  const contactTopicOptions = [
-    { index: 0, value: "General", option: "General" },
-    { index: 1, value: "Support", option: "Support" },
-    { index: 2, value: "Sales", option: "Sales" },
-    { index: 3, value: "Other", option: "Other" },
-  ];
-  const [topicValue, setTopicValue] = useState<
-    (typeof contactTopicOptions)[0] | undefined
-  >(contactTopicOptions[0]);
   return (
     <>
       <Container className="body-container | flex | hero-section">
@@ -109,10 +95,10 @@ export default function Home() {
           security of our users very seriously, and provide transparent
           explanations of how the app accesses and utilizes their account
           information in our{" "}
-          <NavLink target="blank" to="/PAP" className="inline-link | primary">
+          <Link target="blank" to="/PAP" className="inline-link | primary">
             {" "}
             Privacy Policy .{" "}
-          </NavLink>
+          </Link>
           Once the integration is complete, users can easily manage their social
           media pages, monitor traffic, and respond to messages using our
           intuitive platform. Our state-of-the-art integration with ChatGPT 4

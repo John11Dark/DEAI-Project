@@ -16,7 +16,22 @@
         ]
       }
     ],
-    "axe/aria": "off"
+    "axe/aria": "off",
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "meta[name=theme-color]"
+        ]
+      }
+    ],
+    "highest-available-document-mode": "off"
   },
   "browserslist": [
     "defaults",

@@ -1,4 +1,3 @@
-import "./styles/index.css";
 import { AuthNavigator, DashboardNavigator } from "./Navigator";
 import { Route, Routes } from "react-router-dom";
 import {
@@ -18,6 +17,7 @@ import {
   NotFound,
 } from "./screens";
 import { ROUTES } from "./Config";
+import "./styles/style.css";
 
 export default function App() {
   return (
@@ -26,6 +26,8 @@ export default function App() {
         <Route index element={<Home />}></Route>
         <Route path={ROUTES.LOGIN} element={<Login />}></Route>
         <Route path={ROUTES.REGISTER} element={<Register />}></Route>
+        <Route path={ROUTES.NOT_FOUND} element={<NotFound />}></Route>
+        <Route path={ROUTES.UNAUTHORIZED} element={<NotFound />}></Route>
         <Route
           path={ROUTES.FORGET_PASSWORD}
           element={<ForgotPassword />}
@@ -42,8 +44,6 @@ export default function App() {
         <Route path={ROUTES.DASHBOARD_CHARTS} element={<Dashboard />}></Route>
         <Route path={ROUTES.DASHBOARD_CHAT} element={<Chat />}></Route>
       </Route>
-      <Route path={ROUTES.NOT_FOUND} element={<NotFound />}></Route>
-      <Route path={ROUTES.UNAUTHORIZED} element={<NotFound />}></Route>
     </Routes>
   );
 }

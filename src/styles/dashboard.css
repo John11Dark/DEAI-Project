@@ -34,6 +34,23 @@ body {
   padding: var(--spacing-200) var(--spacing-300) 0;
 }
 
+.dashboard-title-container {
+  gap: 0.2px;
+}
+
+.dash-title-container {
+  gap: var(--spacing-100);
+}
+
+.dashboard-title {
+  font-size: var(--font-400);
+}
+.categorize-drop-down-label {
+  font-size: var(--font-100);
+  font-weight: 200;
+  color: var(--secondary-color);
+  margin-right: var(--spacing-100);
+}
 .dashboard-sidebar {
   background-color: transparent;
   grid-row: 1 / span 2;
@@ -112,12 +129,4 @@ body {
 
 .translate-x-10 {
   transform: translateX(10%);
-}
-
-.categorize-drop-down-label {
-  font-size: 17px;
-  font-weight: 200;
-  font-family: var(--secondary-font);
-  color: var(--secondary-color);
-  margin-right: var(--spacing-100);
 }

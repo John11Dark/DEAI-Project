@@ -7,12 +7,18 @@ type ButtonProps = {
   id?: number;
   type: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
   className?: string;
+  tabIndex?: number;
 };
 import { NavLink } from "react-router-dom";
 
 export default function Button(props: ButtonProps) {
   return props.path ? (
-    <NavLink key={props.id} to={props?.path} className="contacts">
+    <NavLink
+      tabIndex={props.tabIndex}
+      key={props.id}
+      to={props?.path}
+      className="contacts"
+    >
       <button
         type={props.type}
         title={props.title}
@@ -26,6 +32,9 @@ export default function Button(props: ButtonProps) {
     </NavLink>
   ) : (
     <button
+      tabIndex={props.tabIndex}
+      key={props.id}
+      type={props.type}
       onClick={props.onClick}
       className={`${
         props.primary ? "primary-button" : "secondary-button"

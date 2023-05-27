@@ -1,14 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type LogoProps = {
   className?: string;
   icon?: boolean;
   size?: number;
+  tabIndex?: number;
 };
 
 export default function Logo(props: LogoProps) {
   return (
-    <NavLink key={0} to="/" className="logo-link">
+    <Link tabIndex={props.tabIndex} key={0} to="/" className="logo-link">
       <img
         title="Home"
         src={`../../../public/${props.icon ? "icon" : "logo"}.png`}
@@ -16,6 +17,6 @@ export default function Logo(props: LogoProps) {
         className="logo"
         data-icon={props.icon}
       />
-    </NavLink>
+    </Link>
   );
 }

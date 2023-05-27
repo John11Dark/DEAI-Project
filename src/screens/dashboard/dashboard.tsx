@@ -1,7 +1,5 @@
 import {
   Container,
-  DashboardSideBar as SideBar,
-  DashboardHeader as Header,
   ClickableCard as Card,
   Greetings,
   Button,

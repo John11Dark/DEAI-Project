@@ -6,23 +6,23 @@ import Container from "../utils/container";
 export default function Header() {
   return (
     <header id="header" className="header | flex" data-is-interacting="false">
-      <Logo />
+      <Logo tabIndex={1} />
       <NavigationBar />
       <Container className="action-buttons | flex">
         <Button
+          tabIndex={9}
           title="Login"
           label="Login"
           path="/login"
-          id={6}
-          onClick={() => setActiveLink(0)}
+          type="button"
         />
         <Button
-          id={7}
+          tabIndex={8}
           title="join us"
           label="join us"
           path="/register"
-          onClick={() => setActiveLink(0)}
           primary
+          type="button"
         />
       </Container>
     </header>
