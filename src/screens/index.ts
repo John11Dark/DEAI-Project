@@ -6,6 +6,7 @@ export { default as APIs } from "./utils/apis";
 export { default as Docs } from "./utils/docs";
 export { default as Contact } from "./utils/contact";
 export { default as NotFound } from "./utils/notFound";
+export { default as UtilsLayout } from "./utils/utilsLayout";
 
 // ? Auth
 export { default as Login } from "./auth/login";
@@ -13,5 +14,6 @@ export { default as Register } from "./auth/register";
 export { default as ForgotPassword } from "./auth/forgotPassword";
 
 // ? Dashboard
+export { default as DashboardLayout } from "./dashboard/dashboardLayout";
 export { default as Dashboard } from "./dashboard/dashboard";
 export { default as Chat } from "./dashboard/Chat";

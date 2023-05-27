@@ -1,12 +1,38 @@
 import { NavLink } from "react-router-dom";
-import { Link } from "../../types/Link.types";
-import { useState } from "react";
-type navigationProps = {
-  links: Link[];
-  activeLink?: number;
+
+type Link = {
+  id?: number;
+  name: string;
+  path: string;
 };
-export default function NavigationBar(props: navigationProps) {
-  const [activeLink, setActiveLink] = useState(0);
+export default function NavigationBar() {
+  const links: Link[] = [
+    {
+      id: 1,
+      name: "Docs",
+      path: "/docs",
+    },
+    {
+      id: 2,
+      name: "Services",
+      path: "/services",
+    },
+    {
+      id: 3,
+      name: "Contact",
+      path: "/contact",
+    },
+    {
+      id: 4,
+      name: "About",
+      path: "/about",
+    },
+    {
+      id: 5,
+      name: "APIs",
+      path: "/apis",
+    },
+  ];
 
   return (
     <nav
@@ -17,15 +43,16 @@ export default function NavigationBar(props: navigationProps) {
       data-visible="false"
     >
       <ul role="list" className="links-list | contents">
-        {props.links.map((link: Link) => (
+        {links.map((link: Link) => (
           <li key={link.id} className="contents">
             <NavLink
               key={link.id}
               to={link.path}
-              className={link.className}
-              data-active={activeLink === link.id}
-              onClick={() => {
-                setActiveLink(link.id);
+              className={`link`}
+              style={({ isActive }) => {
+                return isActive
+                  ? { color: "var(--primary-color)" }
+                  : { color: "var(--primary-color-light)" };
               }}
             >
               {link.name}

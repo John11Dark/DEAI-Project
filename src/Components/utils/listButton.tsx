@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from "./icon";
+import { Link } from "react-router-dom";
 
 type ListButtonProps = {
   id?: string;
@@ -7,6 +8,8 @@ type ListButtonProps = {
   label?: string;
   icon: string;
   className?: string;
+  role?: string;
+  path: string;
 };
 
 export default function ListButton({
@@ -15,16 +18,28 @@ export default function ListButton({
   label,
   icon,
   className,
+  role,
+  path,
 }: ListButtonProps) {
   return (
-    <button
-      id={id}
-      title={title}
-      className={`list-button | clickable ${className}`}
-      type="button"
-    >
-      <Icon name={icon} className="button-icon" />
-      {label && <span className="btn-label">{label}</span>}
-    </button>
+    <li role={role} aria-label={title} className="contents">
+      <Link
+        to={path}
+        id={id}
+        title={title}
+        className={`list-button | clickable ${className}`}
+        type="button"
+      >
+        <button
+          id={id}
+          title={title}
+          className={`list-button | clickable ${className}`}
+          type="button"
+        >
+          <Icon name={icon} className="button-icon" />
+          {label && <span className="btn-label">{label}</span>}
+        </button>
+      </Link>
+    </li>
   );
 }

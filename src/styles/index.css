@@ -405,22 +405,42 @@ svg {
   justify-content: space-between;
 }
 
-.list-button,
-.theme-button {
-  background-color: var(--primary-color-300-50);
-  margin: var(--spacing-100);
-  text-align: center;
-  opacity: 0.8;
-}
-.button-icon,
-.theme-icon {
-  fill: var(--primary-color);
-  width: 25px;
-  height: 25px;
-  filter: drop-shadow(0 0 1rem var(--primary-color));
-  opacity: 0.8;
+/* User avatar container */
+.user-avatar-container {
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-100);
 }
 
-.translate-x-10 {
-  transform: translateX(10%);
+.user-avatar {
+  width: var(--icon-800);
+  height: var(--icon-800);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.user-avatar-info-container {
+  justify-content: center;
+}
+
+.user-name-label {
+  color: var(--primary-color-light);
+}
+.user-role-label {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.logo {
+  width: var(--size-logo);
+  height: var(--size-logo);
+  object-fit: contain;
+}
+
+.logo[data-icon="true"] {
+  width: var(--icon-800);
+  height: var(--icon-800);
+  transform: translateY(-20%);
 }

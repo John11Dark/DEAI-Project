@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Logo from "./logo";
+import ListButton from "../utils/listButton";
+import UserAvatar from "../utils/userAvatar";
 
 type DashboardSideBarProps = {
   className?: string;
@@ -16,19 +18,46 @@ export default function DashboardSideBar({ className }: DashboardSideBarProps) {
       aria-atomic="true"
       aria-live="polite"
       aria-labelledby="dashboard-sidebar"
-      onClick={() => setExpanded(!expanded)}
-      onBlur={() => setExpanded(false)}
       className={`dashboard-sidebar | grid | justify-start ${className}`}
     >
-      <Logo />
-      <ul role="menu">
-        <li role="menuitem">Menu Item 1</li>
-        <li role="menuitem">Menu Item 2</li>
-        <li role="menuitem">Menu Item 3</li>
-        <li role="menuitem">Menu Item 4</li>
-        <li role="menuitem">Menu Item 5</li>
+      <Logo icon={!expanded} className="side-bar-logo" />
+      <ul role="menu" className="grid | center">
+        <ListButton
+          icon="Dashboard"
+          label={expanded ? "Dashboard" : ""}
+          path="/dashboard"
+        />
+
+        <ListButton icon="List" label={expanded ? "Tasks" : ""} path="/tasks" />
+
+        <ListButton
+          icon="Apps"
+          label={expanded ? "Platforms" : ""}
+          path="/platforms"
+        />
+
+        <ListButton
+          icon="Performance"
+          label={expanded ? "Performance" : ""}
+          path="performance"
+        />
+
+        <ListButton
+          icon="Statics"
+          label={expanded ? "Statics" : ""}
+          path="statics"
+        />
+
+        <ListButton
+          icon="Calender"
+          label={expanded ? "Appointments" : ""}
+          path="appointments"
+        />
+
+        <ListButton icon="Chat" label={expanded ? "Chat" : ""} path="/chat" />
       </ul>
-      <Logo />
+
+      <UserAvatar expanded={expanded} />
     </aside>
   );
 }

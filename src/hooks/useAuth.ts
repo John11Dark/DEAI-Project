@@ -2,5 +2,13 @@ import { useContext } from "react";
 import { AuthContext } from "../contexts/authContext";
 
 export function useAuth() {
-  return useContext(AuthContext);
+  const user = {
+    name: "John",
+    surname: "Muller",
+    email: "info@johnmuller.eu",
+    role: "Admin",
+    avatar: "https://i.pravatar.cc/150?img=3",
+  };
+
+  return { user };
 }
