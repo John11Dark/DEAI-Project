@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Logo from "./logo";
 import ListButton from "../utils/listButton";
 import UserAvatar from "../utils/userAvatar";
@@ -9,6 +9,7 @@ type DashboardSideBarProps = {
 
 export default function DashboardSideBar({ className }: DashboardSideBarProps) {
   const [expanded, setExpanded] = useState(false);
+
   return (
     <aside
       tabIndex={2}
@@ -18,7 +19,9 @@ export default function DashboardSideBar({ className }: DashboardSideBarProps) {
       aria-atomic="true"
       aria-live="polite"
       aria-labelledby="dashboard-sidebar"
-      className={`dashboard-sidebar | grid | justify-start ${className}`}
+      className={`dashboard-sidebar ${className}`}
+      onBlur={() => setExpanded(false)}
+      onClick={() => setExpanded(!expanded)}
     >
       <Logo icon={!expanded} className="side-bar-logo" />
       <ul role="menu" className="grid | center">
@@ -26,35 +29,50 @@ export default function DashboardSideBar({ className }: DashboardSideBarProps) {
           icon="Dashboard"
           label={expanded ? "Dashboard" : ""}
           path="/dashboard"
+          pageTitle="Dashboard"
         />
 
-        <ListButton icon="List" label={expanded ? "Tasks" : ""} path="/tasks" />
+        <ListButton
+          icon="List"
+          label={expanded ? "Tasks" : ""}
+          path="/dashboard/tasks"
+          pageTitle="Tasks"
+        />
 
         <ListButton
           icon="Apps"
           label={expanded ? "Platforms" : ""}
-          path="/platforms"
+          path="/dashboard/platforms"
+          pageTitle="Platforms"
         />
 
         <ListButton
           icon="Performance"
           label={expanded ? "Performance" : ""}
-          path="performance"
+          path="/dashboard/performance"
+          pageTitle="Performance"
         />
 
         <ListButton
           icon="Statics"
           label={expanded ? "Statics" : ""}
-          path="statics"
+          path="/dashboard/statics"
+          pageTitle="Statics"
         />
 
         <ListButton
           icon="Calender"
           label={expanded ? "Appointments" : ""}
-          path="appointments"
+          path="/dashboard/appointments"
+          pageTitle="Appointments"
         />
 
-        <ListButton icon="Chat" label={expanded ? "Chat" : ""} path="/chat" />
+        <ListButton
+          icon="Chat"
+          label={expanded ? "Chat" : ""}
+          path="/dashboard/chat"
+          pageTitle="Chat"
+        />
       </ul>
 
       <UserAvatar expanded={expanded} />

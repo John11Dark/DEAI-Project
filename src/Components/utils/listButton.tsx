@@ -10,6 +10,7 @@ type ListButtonProps = {
   className?: string;
   role?: string;
   path: string;
+  pageTitle?: string;
 };
 
 export default function ListButton({
@@ -20,6 +21,7 @@ export default function ListButton({
   className,
   role,
   path,
+  pageTitle,
 }: ListButtonProps) {
   return (
     <li role={role} aria-label={title} className="contents">
@@ -29,6 +31,10 @@ export default function ListButton({
         title={title}
         className={`list-button | clickable ${className}`}
         type="button"
+        state={{ title: pageTitle }}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
         <button
           id={id}

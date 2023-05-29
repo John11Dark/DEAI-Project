@@ -1,6 +1,6 @@
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import Input from "../../forms/input";
+import Input from "../input";
 import Button from "../../utils/button";
 import Icon from "../../utils/icon";
 import Select from "../select";

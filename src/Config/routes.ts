@@ -21,9 +21,12 @@ const ROUTES = Object.freeze({
   VERIFY_PHONE: "/verify-phone",
   VERIFY_PHONE_CONFIRM: "/verify-phone-confirm",
   DASHBOARD: "/dashboard",
-  DASHBOARD_CHARTS: "/dashboard/charts",
-  DASHBOARD_STATISTICS: "/dashboard/statistics",
   DASHBOARD_CHAT: "/dashboard/chat",
+  DASHBOARD_STATICS: "/dashboard/statics",
+  DASHBOARD_APPOINTMENTS: "/dashboard/appointments",
+  DASHBOARD_PERFORMANCE: "/dashboard/performance",
+  DASHBOARD_TASKS: "/dashboard/tasks",
+  DASHBOARD_PLATFORMS: "/dashboard/platforms",
 });
 
 export default ROUTES;

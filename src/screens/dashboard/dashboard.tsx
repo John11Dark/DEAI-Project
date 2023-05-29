@@ -11,7 +11,7 @@ import { useAuth } from "../../hooks";
 export default function Dashboard() {
   const { user } = useAuth();
   return (
-    <>
+    <Container className="dashboard-content | dashboard-content-dash">
       {/* Top section */}
       <Container className="dashboard-top-section | flex | justify-between">
         <Container className="dashboard-greetings-container">
@@ -25,39 +25,56 @@ export default function Dashboard() {
           />
         </Container>
 
-        <Container className="dashboard-info-charts-container | justify-between | flex">
+        <Container className="dashboard-info-charts-container | center | flex">
           <InfoChart
-            id="chart1"
-            title="online traffic"
-            data={{
-              value: 100,
-              text: "Total Sales",
-              labels: ["online traffic"],
-            }}
-            icon="https://i.pravatar.cc/150?img=3"
-            type="pie"
+            data={[
+              { name: "Page A", uv: 4000, pv: 2400, amt: 2400 },
+              { name: "Page B", uv: 3000, pv: 1398, amt: 2210 },
+            ]}
+            title="New Clients"
+            icon="Users"
+            labels={156}
+            id="dashboard-info-chart-1"
           />
           <InfoChart
-            id="chart1"
+            data={[
+              { name: "Page A", uv: 4000, pv: 2400, amt: 2400 },
+              { name: "Page B", uv: 3000, pv: 1398, amt: 2210 },
+            ]}
+            title="Reviews"
+            icon="Users"
+            labels={4.8}
+            id="dashboard-info-chart-1"
+          />
+          <InfoChart
+            data={[
+              { name: "Page A", uv: 4000, pv: 2400, amt: 2400 },
+              { name: "Page B", uv: 3000, pv: 1398, amt: 2210 },
+            ]}
+            title="Reviews"
+            icon="Users"
+            labels={4.8}
+            id="dashboard-info-chart-1"
+          />
+          <InfoChart
+            data={[
+              { name: "Page A", uv: 4000, pv: 2400, amt: 2400 },
+              { name: "Page B", uv: 3000, pv: 1398, amt: 2210 },
+            ]}
+            title="Online Traffic"
+            icon="PieChart"
+            labels={["Social media", "Search engine"]}
+            id="dashboard-info-chart-1"
+          />
+          <InfoChart
+            data={[
+              { name: "Page A", uv: 4000, pv: 2400, amt: 2400 },
+              { name: "Page B", uv: 3000, pv: 1398, amt: 2210 },
+            ]}
+            labels={35}
             title="Bookings"
-            data={{
-              value: 100,
-              text: "Total Sales",
-              labels: ["Bookings"],
-            }}
-            icon="https://i.pravatar.cc/150?img=3"
-            type="pie"
-          />
-          <InfoChart
-            id="chart1"
-            title="Total Sales"
-            data={{
-              value: 100,
-              text: "Total Sales",
-              labels: ["Total Sales"],
-            }}
-            icon="https://i.pravatar.cc/150?img=3"
-            type="pie"
+            icon="Calender"
+            id="dashboard-info-chart-1"
           />
         </Container>
       </Container>
@@ -75,6 +92,6 @@ export default function Dashboard() {
           <List />
         </Container>
       </Container>
-    </>
+    </Container>
   );
 }

@@ -12,9 +12,7 @@ export default function dashboardLayout() {
     <Container className="dashboard-container">
       <Header title="Dashboard" />
       <Sidebar />
-      <Main className="dashboard-content">
-        <Outlet />
-      </Main>
+      <Outlet />
     </Container>
   );
 }

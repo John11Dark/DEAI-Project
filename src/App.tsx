@@ -15,9 +15,13 @@ import {
   Contact,
   About,
   NotFound,
+  Performance,
+  Appointments,
+  Tasks,
 } from "./screens";
 import { ROUTES } from "./Config";
 import "./styles/style.css";
+import Platforms from "./screens/dashboard/platforms";
 
 export default function App() {
   return (
@@ -38,11 +42,23 @@ export default function App() {
         <Route path={ROUTES.CONTACT} element={<Contact />}></Route>
         <Route path={ROUTES.ABOUT} element={<About />}></Route>
       </Route>
-      <Route path="/dashboard" element={<DashboardLayout />}>
-        <Route index element={<Dashboard />}></Route>
+      <Route element={<DashboardLayout />}>
         <Route path={ROUTES.DASHBOARD} element={<Dashboard />}></Route>
-        <Route path={ROUTES.DASHBOARD_CHARTS} element={<Dashboard />}></Route>
         <Route path={ROUTES.DASHBOARD_CHAT} element={<Chat />}></Route>
+        <Route path={ROUTES.DASHBOARD_STATICS} element={<Chat />}></Route>
+        <Route
+          path={ROUTES.DASHBOARD_PERFORMANCE}
+          element={<Performance />}
+        ></Route>
+        <Route
+          path={ROUTES.DASHBOARD_PLATFORMS}
+          element={<Platforms />}
+        ></Route>
+        <Route
+          path={ROUTES.DASHBOARD_APPOINTMENTS}
+          element={<Appointments />}
+        ></Route>
+        <Route path={ROUTES.DASHBOARD_TASKS} element={<Tasks />}></Route>
       </Route>
     </Routes>
   );

@@ -1,28 +1,44 @@
 import { useMemo, useState } from "react";
 import { debounce } from "lodash";
+import IconButton from "../utils/iconButton";
 
 type SearchProps = {
-  itemsList: {
+  data: {
     id: number;
     name: string;
     value: string;
+    visible: boolean;
   }[];
+  placeholder?: string;
+  className?: string;
+  filter?: boolean;
+  searchQueryRef?: React.RefObject<HTMLInputElement>;
 };
 
-export default function Search({ itemsList }: SearchProps) {
+export default function Search({
+  data,
+  placeholder,
+  className,
+  filter,
+  searchQueryRef,
+}: SearchProps) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredItems, setFilteredItems] = useState(itemsList);
+  const [filteredItems, setFilteredItems] = useState(data);
 
   const debouncedFilterItems = useMemo(() => {
     return debounce((query: string) => {
       setFilteredItems(
-        itemsList.filter((item) =>
+        data.filter((item) =>
           item.name.toLowerCase().includes(query.toLowerCase())
         )
       );
     }, 300);
-  }, [itemsList]);
-
+  }, [data]);
+  /* <ul className="search-list" role="list">
+        {filteredItems.map((item) => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul> */
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
     setSearchQuery(query);
@@ -30,20 +46,23 @@ export default function Search({ itemsList }: SearchProps) {
   };
 
   return (
-    <div className="search-container">
+    <div className={`search-container | flex | center | ${className}`}>
       <input
         className="search-input"
+        ref={searchQueryRef}
         type="search"
-        placeholder="Search"
+        placeholder={placeholder ? placeholder : "Search"}
         value={searchQuery}
         onChange={handleSearchChange}
         aria-label="Search"
       />
-      <ul className="search-list" role="list">
-        {filteredItems.map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
+      {filter && (
+        <IconButton
+          icon="Layers"
+          title="search by"
+          className="search-filter-button"
+        />
+      )}
     </div>
   );
 }

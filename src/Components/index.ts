@@ -2,11 +2,8 @@
 export { default as Header } from "./navigation/header";
 export { default as NavigationBar } from "./navigation/nav";
 export { default as Logo } from "./navigation/logo";
-
-// ? Charts
-
-// ? Forms
-
+export { default as MessagesList } from "./navigation/messagesList";
+export { default as ChatInfo } from "./navigation/chatInfo";
 // ? * Content
 export { default as Keyword } from "./content/keyword";
 
@@ -19,15 +16,17 @@ export { default as CirclesEffect } from "./utils/circlesEffect";
 export { default as ScrollDownIndicator } from "./utils/scrollDownIndicator";
 export { default as Emoji } from "./utils/emoji";
 export { default as DashboardList } from "./utils/dashboardList";
-
+export { default as IconButton } from "./utils/iconButton";
+export { default as IllustrationImageElement } from "./notify/illustrationImageElement";
 // ? * Forms
 export { default as Input } from "./forms/input";
 export { default as Select } from "./forms/select";
 export { default as TextArea } from "./forms/textArea";
 export { default as Form } from "./forms/form";
-export { default as ContactForm } from "./forms/Forms/contactForm";
-export { default as RegisterForm } from "./forms/Forms/signup";
-export { default as LoginForm } from "./forms/Forms/login";
+export { default as ContactForm } from "./forms/forms/contactForm";
+export { default as RegisterForm } from "./forms/forms/signup";
+export { default as LoginForm } from "./forms/forms/login";
+export { default as ChatForm } from "./forms/forms/chatForm";
 
 // ? * Cards
 export { default as PlanCard } from "./Cards/planCard";

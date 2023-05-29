@@ -12,7 +12,7 @@ export default function Logo(props: LogoProps) {
     <Link tabIndex={props.tabIndex} key={0} to="/" className="logo-link">
       <img
         title="Home"
-        src={`../../../public/${props.icon ? "icon" : "logo"}.png`}
+        src={`/${props.icon ? "icon" : "logo"}.png`}
         alt="Dark Engines Artificial intelligence Logo"
         className="logo"
         data-icon={props.icon}

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
-import Input from "../../forms/input";
+import Input from "../input";
 import Button from "../../utils/button";
 import { NavLink } from "react-router-dom";
 import ErrorMessage from "../errorMessage";

@@ -5,7 +5,7 @@ import ErrorMessage from "./errorMessage";
 
 type InputProps = {
   name: string;
-  label: string;
+  label?: string;
   id: string;
   className?: string;
   type?: string;
