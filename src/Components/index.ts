@@ -23,10 +23,10 @@ export { default as Input } from "./forms/input";
 export { default as Select } from "./forms/select";
 export { default as TextArea } from "./forms/textArea";
 export { default as Form } from "./forms/form";
-export { default as ContactForm } from "./forms/forms/contactForm";
-export { default as RegisterForm } from "./forms/forms/signup";
-export { default as LoginForm } from "./forms/forms/login";
-export { default as ChatForm } from "./forms/forms/chatForm";
+export { default as ContactForm } from "./forms/customForms/contactForm";
+export { default as RegisterForm } from "./forms/customForms/signup";
+export { default as LoginForm } from "./forms/customForms/login";
+export { default as ChatForm } from "./forms/customForms/chatForm";
 
 // ? * Cards
 export { default as PlanCard } from "./Cards/planCard";

@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import { useForm, Controller } from "react-hook-form";
+// import { useForm, Controller } from "react-hook-form";
 import { useCallback, useEffect, useState } from "react";
 
 import Icon from "../../utils/icon";
@@ -85,7 +85,7 @@ export default function ChatForm({ className }: ChatFormProps) {
     }
   }, [message]);
 
-  Socket.onConnect();
+  // Socket.onConnect();
   return (
     <section className={`chat-form-container | grid | ${className}`}>
       <div className="chat-header | flex">

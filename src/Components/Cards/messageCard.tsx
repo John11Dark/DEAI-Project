@@ -36,9 +36,9 @@ export default function MessageCard({ className, data }: messageCardProps) {
           />
         )}
       </div>
-      <span className="message-card-info-date">
+      {/* <span className="message-card-info-date">
         {getStringDate(data.sentDate)}
-      </span>
+      </span> */}
     </div>
   );
 }

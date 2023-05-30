@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks";
-import { expanded } from "@syncfusion/ej2/treegrid";
 
 type UserAvatarProps = {
   expanded: boolean;

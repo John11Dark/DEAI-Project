@@ -24,7 +24,7 @@ export default function ResetPassword() {
     email: "",
     phoneNumber: "",
     username: "",
-    countryCode: countryCodeOptions[0],
+    countryCode: [],
   };
 
   const handleSubmit = (

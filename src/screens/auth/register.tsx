@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Container, Main } from "../../Components/";
-import SignUpForm from "../../Components/forms/forms/signup";
+import SignUpForm from "../../Components/forms/customForms/signup";
 
 export default function Register() {
   useEffect(() => {

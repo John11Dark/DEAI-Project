@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Icon from "../utils/icon";
-import ToolTip from "../utils/toolTip";
+import ToolTip from "../utils/tooltip";
 
 type SelectProps = {
   name?: string;
