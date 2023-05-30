@@ -1,0 +1,202 @@
+.custom-select {
+  position: relative;
+  background-color: var(--primary-color-dark);
+  display: flex;
+  place-items: center;
+  place-self: center;
+  justify-items: center;
+  justify-content: space-around;
+  padding: var(--spacing-100);
+  margin: var(--spacing-100);
+  border-radius: var(--radius-100);
+  background-color: var(--secondary-color-opacity-100);
+}
+.select-field-drop-down {
+  position: absolute;
+  z-index: 20;
+  top: 110%;
+  width: 100%;
+  margin: var(--spacing-100);
+  border-radius: var(--radius-100);
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 200px;
+  pointer-events: none;
+  display: none;
+}
+
+.select-field-drop-down[data-open="true"] {
+  display: grid;
+}
+
+.option-value {
+  background-color: var(--input-background-color);
+  color: var(--input-foreground-color);
+  padding: var(--spacing-100);
+  pointer-events: all;
+}
+
+.visually-visible {
+  pointer-events: none;
+}
+
+.contact-form {
+  width: max(100%, 37.5vw);
+  height: max(100%, 47.5vh);
+  min-height: 47.5vh;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 15% 15% 40%;
+  gap: var(--spacing-300) var(--spacing-400);
+  margin: 0 auto;
+  place-content: center;
+  place-items: center;
+  place-self: center;
+}
+
+.list-filed {
+  padding: var(--spacing-200) var(--spacing-400);
+  min-height: 2.25em;
+  max-height: 100%;
+  height: 100%;
+}
+
+.field-container {
+  position: relative;
+  min-height: 60px;
+  max-height: 90px;
+  max-width: 350px;
+  margin-bottom: var(--spacing-100);
+  transition: all 0.5s ease-in-out;
+  display: grid;
+  place-self: center;
+  align-content: center;
+  align-items: center;
+  justify-items: flex-start;
+  justify-content: flex-start;
+}
+
+.input-filed {
+  width: 350px;
+  height: 55px;
+  padding: 0 var(--spacing-300);
+  border-radius: var(--radius-100);
+  color: var(--primary-color-light);
+  font-size: var(--font-100);
+  transition: var(--transition-300);
+}
+
+.field-icon {
+  position: absolute;
+  right: var(--spacing-100);
+  z-index: 20;
+  top: 18px;
+  right: 15px;
+  opacity: 0.75;
+}
+
+.field-label {
+  position: absolute;
+  left: var(--spacing-100);
+  z-index: 20;
+  top: 35%;
+  left: 15px;
+  transition: all 0.5s ease-in-out;
+  text-transform: capitalize;
+  font-family: var(--primary-font);
+  opacity: 0.75;
+}
+
+.field-container:focus-within .field-label,
+.field-container:focus .field-label,
+.field-container:focus-visible .field-label,
+.field-label[data-content="true"] {
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+
+#inputFiledLabel[data-error="true"][data-content="false"] {
+  color: var(--danger-100) !important;
+  top: 20% !important;
+}
+
+.error-message-text {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  color: var(--danger-100);
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  margin: var(--spacing-100) 0;
+}
+
+.error[data-error="true"] {
+  color: var(--danger-100) !important;
+  background-color: red !important;
+}
+
+.Email {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.Message {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.Message .field-label {
+  top: 20px;
+  transform: translateY(0);
+}
+
+.submitBtn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: var(--icon-200);
+  height: var(--icon-200);
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.send-message-icon {
+  fill: var(--primary-color);
+  max-width: var(--icon-400);
+  max-height: var(--icon-400);
+}
+
+.inline-link,
+.link-paragraph {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 16px;
+  margin: var(--spacing-600) 0;
+  color: var(--secondary-color-opacity-100);
+  text-align: center;
+}
+
+.inline-link {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-left: var(--spacing-200);
+}
+.login-form {
+  width: 100%;
+  max-width: 350px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  place-self: center;
+  gap: var(--spacing-300);
+}
+
+.login-button {
+  width: 175px;
+}

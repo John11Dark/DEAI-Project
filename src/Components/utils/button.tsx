@@ -8,8 +8,11 @@ type ButtonProps = {
   type: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
   className?: string;
   tabIndex?: number;
+  icon?: string;
 };
 import { NavLink } from "react-router-dom";
+import Icon from "./icon";
+import colors from "../../styles/colors";
 
 export default function Button(props: ButtonProps) {
   return props.path ? (
@@ -32,14 +35,18 @@ export default function Button(props: ButtonProps) {
     </NavLink>
   ) : (
     <button
+      title={props.title}
       tabIndex={props.tabIndex}
       key={props.id}
       type={props.type}
       onClick={props.onClick}
       className={`${
         props.primary ? "primary-button" : "secondary-button"
-      } | button | clickable ${props.className}`}
+      } | button | clickable ${props.className} | ${
+        props.icon ? "flex | center | has-icon" : ""
+      } `}
     >
+      {props.icon && <Icon name={props.icon} fill={colors.light} />}
       {props.label}
     </button>
   );

@@ -10,6 +10,7 @@
   --primary-color-300-50: #4c5824a8;
   --secondary-color: #969595;
   --accent-color: var(--primary-color);
+  --danger-100: #e96161ef;
 
   /* * Fonts */
   --primary-font: "Montserrat", sans-serif;
@@ -292,6 +293,9 @@ button {
   fill: var(--primary-color-light);
 }
 
+.button.has-icon {
+  gap: var(--spacing-200);
+}
 abbr {
   position: relative;
   cursor: help;

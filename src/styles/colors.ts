@@ -4,6 +4,7 @@ const colors = Object.freeze({
   dark: "#2a2a2a",
   accent: "currentColor",
   danger: "#ff0000",
+  light: "#fefefe",
 });
 
 export default colors;

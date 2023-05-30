@@ -5,8 +5,9 @@ import * as Yup from "yup";
 
 import Input from "../input";
 import Button from "../../utils/button";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ErrorMessage from "../errorMessage";
+import { ROUTES } from "../../../Config";
 
 export default function SignUpForm(onSubmit: any) {
   const validationSchema = Yup.object({
@@ -35,14 +36,13 @@ export default function SignUpForm(onSubmit: any) {
     confirmPassword: "",
   };
   const [error, setError] = useState("");
+  // ! create a custom alert to show server errors
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      <h1 className="form-title">Sign up</h1>
-      {error && <ErrorMessage message={error} />}
       <Form className="sign-up-form">
         <Input
           name="firstName"
@@ -85,19 +85,19 @@ export default function SignUpForm(onSubmit: any) {
           type="submit"
           label="Sign up"
           title="sign up"
+          icon="Register"
+          primary
         />
+        <p className="link-paragraph">
+          Already have an account?
+          <Link
+            to={ROUTES.LOGIN}
+            className="inline-link | primary | link | clickable"
+          >
+            Login
+          </Link>
+        </p>
       </Form>
-
-      <p className="link-paragraph">
-        Already have an account?
-        <NavLink
-          target="blank"
-          to="/PAP"
-          className="inline-link | primary | link | clickable"
-        >
-          Login
-        </NavLink>
-      </p>
     </Formik>
   );
 }

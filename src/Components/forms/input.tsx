@@ -29,10 +29,11 @@ export default function Input(props: InputProps) {
     <article className={`field-container | relative | ${props.parentClass}`}>
       <label
         id="inputFiledLabel"
-        data-has-content={meta.value ? "true" : "false"}
+        data-content={meta.value ? "true" : "false"}
         has-content="false"
         className={`field-label | allow-label-flow  ${props.className}`}
         htmlFor={props.id}
+        data-error={meta.touched && meta.error ? "true" : "false"}
       >
         {props.label}
       </label>
@@ -44,13 +45,14 @@ export default function Input(props: InputProps) {
         placeholder={props?.placeholder}
         required={props.required}
         type={props.type}
-        className={`${props.className}`}
+        className={`input-filed | error | ${props.className}`}
         autoComplete="on"
         pattern={props.pattern}
         minLength={props.minLength}
         maxLength={props.maxLength}
         min={props.min}
         max={props.max}
+        has-error={meta.touched && meta.error ? "true" : "false"}
         {...field}
       />
       {props.icon && (

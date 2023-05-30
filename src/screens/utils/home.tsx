@@ -7,12 +7,13 @@ import {
   CirclesEffect,
   ScrollDownIndicator,
   ContactForm,
+  Main,
 } from "../../Components";
 import UnderlineKeyword from "../../Components/content/underlineKeyword";
 
 export default function Home() {
   return (
-    <>
+    <Main className="main-content" id="main-content">
       <Container className="body-container | flex | hero-section">
         <ScrollDownIndicator />
         <CirclesEffect className="hero-circles-effect" />
@@ -150,7 +151,7 @@ export default function Home() {
           </article>
           <img src="/plans.png" alt="" />
         </article>
-        <Container className="plans-container | flex">
+        {/* <Container className="plans-container | flex">
           <PlanCard
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             label="plan 1"
@@ -170,7 +171,7 @@ export default function Home() {
             price={455}
             features={["feature 1", "feature 2", "feature 3"]}
           />
-        </Container>
+        </Container> */}
       </Container>
 
       <Container className="body-container | flex">
@@ -186,6 +187,6 @@ export default function Home() {
         </article>
         <ContactForm />
       </Container>
-    </>
+    </Main>
   );
 }
