@@ -19,13 +19,14 @@ type InputProps = {
   step?: number;
   icon?: IconName;
   iconSize?: number;
+  parentClass?: string;
 };
 
 export default function Input(props: InputProps) {
   const [field, meta] = useField(props.id);
 
   return (
-    <article className={`field-container | ${props.className}`}>
+    <article className={`field-container | relative | ${props.parentClass}`}>
       <label
         id="inputFiledLabel"
         data-has-content={meta.value ? "true" : "false"}
@@ -43,7 +44,7 @@ export default function Input(props: InputProps) {
         placeholder={props?.placeholder}
         required={props.required}
         type={props.type}
-        className={`input-filed | ${props.className}`}
+        className={`${props.className}`}
         autoComplete="on"
         pattern={props.pattern}
         minLength={props.minLength}
@@ -129,7 +130,7 @@ export default function Input(props: InputProps) {
   };
 
   return (
-    <article className={`field-container | ${props.parentClass}`}>
+    <article className={``}>
       <label
         className={`field-label | allow-label-flow ${props.className}`}
         htmlFor={props.id}

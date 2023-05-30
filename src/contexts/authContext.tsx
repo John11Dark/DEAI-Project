@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { auth } from "../api";
+import { Auth } from "../api";
 import { AuthNavigator } from "../Navigator";
 import { useNavigate } from "react-router-dom";
 type AuthContextType = {
@@ -20,7 +20,7 @@ type registerCredentials = {
   name: string;
 };
 
-type userType = ReturnType<typeof auth.getUser>;
+type userType = ReturnType<typeof Auth.getUser>;
 
 const AuthContext = createContext<AuthContextType>({
   user: undefined,
@@ -35,26 +35,26 @@ function useAuth() {
   const [isReady, setIsReady] = useState(false);
 
   const login = async (credentials: LoginCredentials) => {
-    const user = await auth.login(credentials);
+    const user = await Auth.login(credentials);
     setUser(user);
     navigate("/");
   };
 
   const logout = async () => {
     setUser(undefined);
-    await auth.logout();
+    await Auth.logout();
     navigate("/welcome");
   };
 
   const register = async (credentials: LoginCredentials) => {
-    const user = await auth.login(credentials);
+    const user = await Auth.login(credentials);
     setUser(user);
     navigate("/");
   };
 
   useEffect(() => {
     const loadUser = async () => {
-      const user: userType = await auth.getUser();
+      const user: userType = await Auth.getUser();
       setUser(user);
       setIsReady(true);
     };

@@ -1,6 +1,7 @@
 import axios, { AxiosInstance } from "axios";
+import settings from "../Config/settings";
 
-const baseURL = "https://example.com/api";
+const baseURL = settings.apiUrl;
 const accessKey = "Access-Key";
 const accessValue = "your-access-value";
 const headersKey = "Headers-Key";

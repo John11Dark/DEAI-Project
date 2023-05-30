@@ -1,3 +1,4 @@
+import settings from "../Config/settings";
 import client from "./client";
 import jwtDecode from "jwt-decode";
 interface LoginProps {
@@ -5,8 +6,15 @@ interface LoginProps {
   password: string;
 }
 
-function login({ email, password }: LoginProps): Promise<any> {
-  return client.post("/auth", { email, password });
+async function login({ email, password }: LoginProps): Promise<any> {
+  const response = await fetch(`${settings.apiUrl}/auth/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password }),
+  });
+  return response;
 }
 
 interface UserInfoProps {

@@ -60,7 +60,7 @@ export default function ClickableChart({
             </p>
             <p className="since-value-time">Since last month</p>
           </div>
-          <svg viewBox="0 0 149.974 32.581" className="trend-line-info-chart">
+          <svg viewBox="0 0 149 32" className="trend-line-info-chart">
             <path
               d="M493.044,326.2l-.468-.7,15.367-10.244,10.538,5.058,15.157-9.684.2.087,29.946,12.775L587.8,311.7l23.316,9.452,29.3-25.948.559.631-29.688,26.293-23.45-9.507-24.019,11.8-30.1-12.839-15.177,9.7-10.525-5.051Z"
               transform="translate(-491.744 -294.45)"

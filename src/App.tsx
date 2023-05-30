@@ -1,4 +1,3 @@
-import { AuthNavigator, DashboardNavigator } from "./Navigator";
 import { Route, Routes } from "react-router-dom";
 import {
   Chat,
@@ -42,7 +41,7 @@ export default function App() {
         <Route path={ROUTES.CONTACT} element={<Contact />}></Route>
         <Route path={ROUTES.ABOUT} element={<About />}></Route>
       </Route>
-      <Route element={<DashboardLayout />}>
+      {/* <Route element={<DashboardLayout />}>
         <Route path={ROUTES.DASHBOARD} element={<Dashboard />}></Route>
         <Route path={ROUTES.DASHBOARD_CHAT} element={<Chat />}></Route>
         <Route path={ROUTES.DASHBOARD_STATICS} element={<Chat />}></Route>
@@ -59,7 +58,7 @@ export default function App() {
           element={<Appointments />}
         ></Route>
         <Route path={ROUTES.DASHBOARD_TASKS} element={<Tasks />}></Route>
-      </Route>
+      </Route> */}
     </Routes>
   );
 }

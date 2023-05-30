@@ -3,6 +3,7 @@ import { AuthContext } from "../contexts/authContext";
 
 export function useAuth() {
   const user = {
+    id: 1,
     name: "John",
     surname: "Muller",
     email: "info@johnmuller.eu",

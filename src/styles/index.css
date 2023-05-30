@@ -104,6 +104,7 @@
   :root {
     --primary-color-light: #fbfdf9;
     --primary-color-dark: #1f1f21;
+    --primary-color-dark-50: #3033275e;
     --primary-color-dark-100: #303327;
     --primary-color-dark-200: #3c412dda;
     --background-color: #1f1f21;
@@ -546,4 +547,8 @@ svg {
   font-weight: 500;
   font-size: var(--font-200);
   text-transform: capitalize;
+}
+
+.gap-300 {
+  gap: var(--spacing-400);
 }
