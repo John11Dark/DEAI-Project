@@ -10,7 +10,7 @@ export default function Login() {
     <Main className="login-page | flex | single-page">
       <img
         className="login-illustration | auth-illustration | illustration-left"
-        src="/login-left.png"
+        src="./login-left.png"
         alt="login illustration"
       />
       <Container className="login-form-container | grid | center | gap-300">
@@ -26,7 +26,7 @@ export default function Login() {
       </Container>
       <img
         className="login-illustration | auth-illustration | illustration-right"
-        src="login-right.png"
+        src="./login-right.png"
         alt="login illustration"
       />
     </Main>

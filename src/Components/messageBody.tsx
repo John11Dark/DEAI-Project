@@ -17,7 +17,7 @@ const MessageContentCard = forwardRef(
         className={`message-body | relative | flex | ${className}`}
         data-attr={data.sender === currentUser?.id ? "sender" : "receiver"}
       >
-        <img src="/icon.png" alt="" className="message-avatar-image" />
+        <img src="./icon.png" alt="" className="message-avatar-image" />
         <p className="message-time">{formatCreatedDate(data.createdAt)}</p>
         <p className="message-content">{data.message}</p>
       </div>

@@ -150,7 +150,7 @@ export default function Home() {
               business.
             </p>
           </article>
-          <img src="/plans.png" alt="" />
+          <img src="./plans.png" alt="" />
         </article>
         {/* <Container className="plans-container | flex">
           <PlanCard
@@ -184,7 +184,7 @@ export default function Home() {
             We're committed to helping you get the most out of our product and
             making your experience as smooth and productive as possible.
           </p>
-          <img src="/contact.png" alt="" />
+          <img src="./contact.png" alt="" />
         </article>
         <ContactForm />
       </Container>
