@@ -26,7 +26,7 @@ export default function UserAvatar({ expanded }: UserAvatarProps) {
           <span className="user-name-label">
             {user.name} {user.surname}
           </span>
-          <span className="user-role-label">{user.role}</span>
+          <span className="user-role-label | any">{user.role}</span>
         </article>
       )}
     </Link>
