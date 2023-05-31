@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "./logo";
 import ListButton from "../utils/listButton";
 import UserAvatar from "../utils/userAvatar";
+import { ROUTES } from "../../Config";
 
 type DashboardSideBarProps = {
   className?: string;
@@ -28,49 +29,49 @@ export default function DashboardSideBar({ className }: DashboardSideBarProps) {
         <ListButton
           icon="Dashboard"
           label={expanded ? "Dashboard" : ""}
-          path="/dashboard"
+          path={ROUTES.DASHBOARD}
           pageTitle="Dashboard"
         />
 
         <ListButton
           icon="List"
           label={expanded ? "Tasks" : ""}
-          path="/dashboard/tasks"
+          path={ROUTES.DASHBOARD_TASKS}
           pageTitle="Tasks"
         />
 
         <ListButton
           icon="Apps"
           label={expanded ? "Platforms" : ""}
-          path="/dashboard/platforms"
+          path={ROUTES.DASHBOARD_PLATFORMS}
           pageTitle="Platforms"
         />
 
         <ListButton
           icon="Performance"
           label={expanded ? "Performance" : ""}
-          path="/dashboard/performance"
+          path={ROUTES.DASHBOARD_PERFORMANCE}
           pageTitle="Performance"
         />
 
         <ListButton
           icon="Statics"
           label={expanded ? "Statics" : ""}
-          path="/dashboard/statics"
+          path={ROUTES.DASHBOARD_STATICS}
           pageTitle="Statics"
         />
 
         <ListButton
           icon="Calender"
           label={expanded ? "Appointments" : ""}
-          path="/dashboard/appointments"
+          path={ROUTES.DASHBOARD_APPOINTMENTS}
           pageTitle="Appointments"
         />
 
         <ListButton
           icon="Chat"
           label={expanded ? "Chat" : ""}
-          path="/dashboard/chat"
+          path={ROUTES.DASHBOARD_CHAT}
           pageTitle="Chat"
         />
       </ul>

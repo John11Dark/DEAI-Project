@@ -10,6 +10,7 @@ import {
   Main,
 } from "../../Components";
 import UnderlineKeyword from "../../Components/content/underlineKeyword";
+import { ROUTES } from "../../Config";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
           <Button
             label="Get Started"
             title="Get Started"
-            path="/register"
+            path={ROUTES.REGISTER}
             type="button"
             primary
             onClick={() => () => {

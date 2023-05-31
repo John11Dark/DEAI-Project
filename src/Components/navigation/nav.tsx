@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { ROUTES } from "../../Config";
 
 type Link = {
   id?: number;
@@ -11,31 +12,31 @@ const links: Link[] = [
   {
     id: 11,
     name: "Docs",
-    path: "/docs",
+    path: ROUTES.DOCS,
     tabIndex: 2,
   },
   {
     id: 22,
     name: "Services",
-    path: "/services",
+    path: ROUTES.SERVICES,
     tabIndex: 3,
   },
   {
     id: 33,
     name: "Contact",
-    path: "/contact",
+    path: ROUTES.CONTACT,
     tabIndex: 4,
   },
   {
     id: 44,
     name: "About",
-    path: "/about",
+    path: ROUTES.ABOUT,
     tabIndex: 5,
   },
   {
     id: 58,
     name: "APIs",
-    path: "/apis",
+    path: ROUTES.APIs,
     tabIndex: 6,
   },
 ];

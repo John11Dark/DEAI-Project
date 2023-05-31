@@ -8,9 +8,12 @@ export default function DashNavigator() {
     <>
       <DashboardLayout />
       <Routes>
-        <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route path={ROUTES.DASHBOARD} element={<DashboardLayout />}>
           <Route index element={<Dashboard />}></Route>
-          <Route path={ROUTES.DASHBOARD_CHARTS} element={<Dashboard />}></Route>
+          <Route
+            path={ROUTES.DASHBOARD_STATICS}
+            element={<Dashboard />}
+          ></Route>
           <Route path={ROUTES.DASHBOARD_CHAT} element={<Chat />}></Route>
         </Route>
       </Routes>

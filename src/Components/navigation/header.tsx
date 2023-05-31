@@ -2,6 +2,7 @@ import Button from "../utils/button";
 import Logo from "./logo";
 import NavigationBar from "./nav";
 import Container from "../utils/container";
+import { ROUTES } from "../../Config";
 
 export default function Header() {
   return (
@@ -13,14 +14,14 @@ export default function Header() {
           tabIndex={9}
           title="Login"
           label="Login"
-          path="/login"
+          path={ROUTES.LOGIN}
           type="button"
         />
         <Button
           tabIndex={8}
           title="join us"
           label="join us"
-          path="/register"
+          path={ROUTES.REGISTER}
           primary
           type="button"
         />
