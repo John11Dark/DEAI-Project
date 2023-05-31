@@ -10,7 +10,7 @@ import Button from "../../utils/button";
 import { useAuth } from "../../../hooks";
 import colors from "../../../styles/colors";
 import { MessageContentType } from "../../../types/messageContent";
-import MessageContentCard from "../../Cards/messageBody";
+import MessageContentCard from "../../messageBody";
 // import { Socket } from "../../../api";
 type ChatFormProps = {
   className?: string;

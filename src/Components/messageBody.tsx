@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import { MessageContentType } from "../../types";
-import DateFormatter from "../../utils/Date";
+import { MessageContentType } from "../types/messageContent";
+import DateFormatter from "../utils/Date";
 
 const { formatCreatedDate } = DateFormatter();
 

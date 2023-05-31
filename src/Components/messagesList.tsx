@@ -1,9 +1,9 @@
 import { useRef } from "react";
-import Search from "../forms/search";
-import MessageCard from "../Cards/messageCard";
-import IconLabelButton from "../utils/iconLabelButton";
-import { MessageType } from "../../types/MessageType";
-import IllustrationImageElement from "../notify/illustrationImageElement";
+import Search from "./forms/search";
+import MessageCard from "./messageCard";
+import IconLabelButton from "./utils/iconLabelButton";
+import { MessageType } from "../types/messageType";
+import IllustrationImageElement from "./notify/illustrationImageElement";
 
 type MessagesListProps = {
   className?: string;

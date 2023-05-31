@@ -1,6 +1,6 @@
-import { Container, MessagesList, ChatForm, ChatInfo } from "../../Components";
-import { useAuth } from "../../hooks";
-import { MessageType } from "../../types";
+import { Container, MessagesList, ChatForm, ChatInfo } from "../Components";
+import { useAuth } from "../hooks";
+import { MessageType } from "../types/messageType";
 const data: MessageType[] = [];
 export default function Chat() {
   const { user } = useAuth();

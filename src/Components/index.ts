@@ -2,7 +2,7 @@
 export { default as Header } from "./navigation/header";
 export { default as NavigationBar } from "./navigation/nav";
 export { default as Logo } from "./navigation/logo";
-export { default as MessagesList } from "./navigation/messagesList";
+export { default as MessagesList } from "./messagesList";
 export { default as ChatInfo } from "./navigation/chatInfo";
 // ? * Content
 export { default as Keyword } from "./content/keyword";

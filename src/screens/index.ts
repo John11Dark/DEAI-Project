@@ -16,7 +16,7 @@ export { default as ForgotPassword } from "./auth/forgotPassword";
 // ? Dashboard
 export { default as DashboardLayout } from "./dashboard/dashboardLayout";
 export { default as Dashboard } from "./dashboard/dashboard";
-export { default as Chat } from "./dashboard/chat";
+export { default as Chat } from "./chat";
 export { default as Statics } from "./dashboard/statics";
 export { default as Appointments } from "./dashboard/appointments";
 export { default as Performance } from "./dashboard/performance";
