@@ -1,4 +1,4 @@
-type MessageType = {
+export type MessageType = {
   id: number;
   messageTitle: string;
   value: string;
@@ -20,4 +20,3 @@ type MessageType = {
   visible: boolean;
   starred: boolean;
 };
-export default MessageType;

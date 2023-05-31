@@ -1,4 +1,4 @@
-type MessageContentType = {
+export type MessageContentType = {
   id: string;
   message?: string;
   sender: string | number;
@@ -9,5 +9,3 @@ type MessageContentType = {
   voiceNote?: string;
   conversationId: string;
 };
-
-export default MessageContentType;

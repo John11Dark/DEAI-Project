@@ -21,3 +21,4 @@ export { default as Statics } from "./dashboard/statics";
 export { default as Appointments } from "./dashboard/appointments";
 export { default as Performance } from "./dashboard/performance";
 export { default as Tasks } from "./dashboard/tasks";
+export { default as Platforms } from "./dashboard/platforms";

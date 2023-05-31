@@ -1,6 +1,6 @@
 import Label from "../utils/label";
 import Icon from "../utils/icon";
-import { MessageType } from "../../types";
+import { MessageType } from "../../types/MessageType";
 type messageCardProps = {
   className?: string;
   data: MessageType;

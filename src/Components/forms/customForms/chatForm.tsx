@@ -9,7 +9,7 @@ import IconButton from "../../utils/iconButton";
 import Button from "../../utils/button";
 import { useAuth } from "../../../hooks";
 import colors from "../../../styles/colors";
-import { MessageContentType } from "../../../types";
+import { MessageContentType } from "../../../types/messageContent";
 import MessageContentCard from "../../Cards/messageBody";
 // import { Socket } from "../../../api";
 type ChatFormProps = {
@@ -85,7 +85,6 @@ export default function ChatForm({ className }: ChatFormProps) {
     }
   }, [message]);
 
-  // Socket.onConnect();
   return (
     <section className={`chat-form-container | grid | ${className}`}>
       <div className="chat-header | flex">

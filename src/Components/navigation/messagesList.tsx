@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Search from "../forms/search";
 import MessageCard from "../Cards/messageCard";
 import IconLabelButton from "../utils/iconLabelButton";
-import { MessageType } from "../../types";
+import { MessageType } from "../../types/MessageType";
 import IllustrationImageElement from "../notify/illustrationImageElement";
 
 type MessagesListProps = {
