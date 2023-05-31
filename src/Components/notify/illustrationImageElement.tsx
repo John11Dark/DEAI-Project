@@ -13,7 +13,7 @@ export default function IllustrationImageElement({
     <article className={`illustration-container ${className}`}>
       <img
         className="illustration-image"
-        src={`.${imgSrc}`}
+        src={`${imgSrc}`}
         aria-hidden="true"
       />
       <p className="illustration-message">{message}</p>
