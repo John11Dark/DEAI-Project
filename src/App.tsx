@@ -17,11 +17,11 @@ import {
   Performance,
   Appointments,
   Tasks,
+  Platforms,
 } from "./screens";
 import { ROUTES } from "./Config";
 import "./styles/style.css";
 import "./styles/form.css";
-import Platforms from "./screens/dashboard/platforms";
 
 export default function App() {
   return (

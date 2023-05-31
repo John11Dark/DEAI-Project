@@ -3,5 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/DEAI-Project/",
+  base: "./",
+  paths: {
+    "../../types/*": ["./src/types/*"],
+    "./dashboard/9*": ["./src/screen/dashboard/*"],
+  },
 });
