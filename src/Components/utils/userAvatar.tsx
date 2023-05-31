@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks";
+import { ROUTES } from "../../Config";
 
 type UserAvatarProps = {
   expanded: boolean;
@@ -12,7 +13,7 @@ export default function UserAvatar({ expanded }: UserAvatarProps) {
       title={`${(user.name, user.surname)} profile picture`}
       type="button"
       className="user-avatar-container | clickable | flex"
-      to="/dashboard/profile"
+      to={ROUTES.PROFILE}
       aria-label="User profile"
       aria-labelledby="user-avatar"
     >

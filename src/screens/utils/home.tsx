@@ -97,7 +97,11 @@ export default function Home() {
           security of our users very seriously, and provide transparent
           explanations of how the app accesses and utilizes their account
           information in our{" "}
-          <Link target="blank" to="/PAP" className="inline-link | primary">
+          <Link
+            target="blank"
+            to={ROUTES.RESET_PASSWORD_CONFIRM}
+            className="inline-link | primary"
+          >
             {" "}
             Privacy Policy .{" "}
           </Link>

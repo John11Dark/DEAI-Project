@@ -1,5 +1,6 @@
 import { Navigate, Routes, useLocation } from "react-router-dom";
 import { useAuth } from "../hooks";
+import { ROUTES } from "../Config";
 
 export default function PrivateNavigator(children: any) {
   const location = useLocation();
@@ -7,6 +8,6 @@ export default function PrivateNavigator(children: any) {
   return user ? (
     <Routes>{children}</Routes>
   ) : (
-    <Navigate to="/" state={{ from: location }} replace />
+    <Navigate to={ROUTES.WELCOME} state={{ from: location }} replace />
   );
 }
