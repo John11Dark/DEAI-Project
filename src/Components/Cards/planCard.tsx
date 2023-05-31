@@ -13,6 +13,11 @@ type PlanCardProps = {
 export default function PlanCard(props: PlanCardProps) {
   return (
     <article className={`plan-card | ${props.className}`}>
+      <header className="plan-card-header">
+        <h3 className="plan-card-label">{props.label}</h3>
+        <p className="plan-card-price">{props.price}</p>
+        <p className="plan-card-description">{props.description}</p>
+      </header>
       <ul className="plan-card-features">
         {props.features.map((feature, index) => (
           <li key={index} className="plan-card-feature">

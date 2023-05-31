@@ -89,7 +89,7 @@ export default function ChatForm({ className }: ChatFormProps) {
     <section className={`chat-form-container | grid | ${className}`}>
       <div className="chat-header | flex">
         <div className="flex | center | gap-300">
-          <img src="./icon.png" alt="" className="chat-avatar" />
+          <img src="/icon.png" alt="" className="chat-avatar" />
           <div className="chat-header-info">
             <h2 className="chat-title">New Chat</h2>
             <Button

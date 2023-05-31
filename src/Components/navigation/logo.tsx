@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { ROUTES } from "../../Config";
 
 type LogoProps = {
   className?: string;
@@ -10,12 +9,7 @@ type LogoProps = {
 
 export default function Logo(props: LogoProps) {
   return (
-    <Link
-      tabIndex={props.tabIndex}
-      key={0}
-      to={ROUTES.WELCOME}
-      className="logo-link"
-    >
+    <Link tabIndex={props.tabIndex} key={0} to="/" className="logo-link">
       <img
         title="Home"
         src={`/${props.icon ? "icon" : "logo"}.png`}

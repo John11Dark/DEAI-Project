@@ -11,11 +11,7 @@ export default function IllustrationImageElement({
 }: Props) {
   return (
     <article className={`illustration-container ${className}`}>
-      <img
-        className="illustration-image"
-        src={`${imgSrc}`}
-        aria-hidden="true"
-      />
+      <img className="illustration-image" src={imgSrc} aria-hidden="true" />
       <p className="illustration-message">{message}</p>
     </article>
   );

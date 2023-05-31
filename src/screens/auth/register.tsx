@@ -11,7 +11,7 @@ export default function Register() {
     <Main className="register-page | flex | center">
       <img
         className="register-illustration | auth-illustration | illustration-left"
-        src="./reg-left.png"
+        src="/reg-left.png"
         alt="register illustration"
       />
       <Container className="register-form-container | grid | center | gap-300">
@@ -27,7 +27,7 @@ export default function Register() {
       </Container>
       <img
         className="register-illustration | auth-illustration | illustration-right"
-        src="./reg-right.png"
+        src="reg-right.png"
         alt="register illustration"
       />
     </Main>

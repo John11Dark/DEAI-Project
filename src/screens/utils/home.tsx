@@ -97,11 +97,7 @@ export default function Home() {
           security of our users very seriously, and provide transparent
           explanations of how the app accesses and utilizes their account
           information in our{" "}
-          <Link
-            target="blank"
-            to={ROUTES.RESET_PASSWORD_CONFIRM}
-            className="inline-link | primary"
-          >
+          <Link target="blank" to="/PAP" className="inline-link | primary">
             {" "}
             Privacy Policy .{" "}
           </Link>
@@ -154,7 +150,7 @@ export default function Home() {
               business.
             </p>
           </article>
-          <img src="./plans.png" alt="" />
+          <img src="/plans.png" alt="" />
         </article>
         {/* <Container className="plans-container | flex">
           <PlanCard
@@ -188,7 +184,7 @@ export default function Home() {
             We're committed to helping you get the most out of our product and
             making your experience as smooth and productive as possible.
           </p>
-          <img src="./contact.png" alt="" />
+          <img src="/contact.png" alt="" />
         </article>
         <ContactForm />
       </Container>
