@@ -39,7 +39,7 @@ export default function MessagesList({
       {messages.length > 0 ? (
         <div className="messages-container | center | grid">
           {messages.map((message) => (
-            <MessageCard data={message} />
+            <MessageCard data={message} className="any" />
           ))}
           <IllustrationImageElement
             imgSrc="/no-more-messages.png"

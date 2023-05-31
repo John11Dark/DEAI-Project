@@ -1,6 +1,5 @@
 import Label from "../utils/label";
 import Icon from "../utils/icon";
-import { getStringDate } from "../../utils";
 import { MessageType } from "../../types";
 type messageCardProps = {
   className?: string;
