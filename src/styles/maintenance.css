@@ -1,0 +1,35 @@
+.inline-link-paragraph {
+  display: inline-block;
+  isolation: isolate;
+  position: relative;
+  color: var(--primary-color);
+}
+
+.section-img-left {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.section-img-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+}
+
+.section-article {
+  text-align: center;
+  margin: 0 auto;
+  max-width: max(55vw, 700px);
+  height: 90vh;
+}
+
+.title {
+  max-width: unset;
+}

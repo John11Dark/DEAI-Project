@@ -18,9 +18,9 @@ import {
   Appointments,
   Tasks,
   Platforms,
+  Services,
 } from "./screens";
 import { ROUTES } from "./Config";
-import "./styles/style.css";
 import "./styles/form.css";
 
 export default function App() {
@@ -41,6 +41,7 @@ export default function App() {
         <Route path={ROUTES.APIs} element={<APIs />}></Route>
         <Route path={ROUTES.CONTACT} element={<Contact />}></Route>
         <Route path={ROUTES.ABOUT} element={<About />}></Route>
+        <Route path={ROUTES.SERVICES} element={<Services />}></Route>
       </Route>
       <Route element={<DashboardLayout />}>
         <Route path={ROUTES.DASHBOARD} element={<Dashboard />}></Route>

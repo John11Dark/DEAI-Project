@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { LoginForm, Container, Main } from "../../Components/";
+import { setupDocument } from "../../utils";
 
 export default function Login() {
   useEffect(() => {
-    document.title = "Login | DEAI";
-    document.documentElement.style.overflow = "hidden";
+    setupDocument({
+      title: "Login",
+      singlePage: true,
+    });
   }, []);
   return (
     <Main className="login-page | flex | single-page">

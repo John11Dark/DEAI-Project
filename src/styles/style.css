@@ -211,9 +211,14 @@ main {
 .underline-keyword-image {
   position: absolute;
   z-index: -1;
-  inset: 0.5em 0 0 0;
+  inset: 0 auto;
   max-width: 100%;
   opacity: 0.95;
+  max-width: 95%;
+  max-height: 100px;
+  object-fit: contain !important;
+  filter: blur(1px);
+  transform: scale(1.1) translate(5%, 20%);
 }
 
 .hero-circles-effect {
@@ -282,12 +287,13 @@ main {
 
 .outline-button {
   position: relative;
-  background-color: transparent;
+  background-color: transparent !important;
+  border: unset !important;
   text-transform: uppercase;
   font-size: var(--font-500);
   font-weight: 800;
-  border: none;
   transition: all 0.3s ease;
+  margin-top: var(--spacing-600);
 }
 
 .outline-button::before {

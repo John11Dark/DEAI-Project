@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Container,
   ClickableCard as Card,
@@ -7,9 +8,17 @@ import {
   DashboardList as List,
 } from "../../Components";
 import { useAuth } from "../../hooks";
+import { setupDocument } from "../../utils";
+import "../../styles/dashboard.css";
 
 export default function Dashboard() {
   const { user } = useAuth();
+  useEffect(() => {
+    setupDocument({
+      title: "Dashboard",
+      singlePage: true,
+    });
+  }, []);
   return (
     <Container className="dashboard-content | dashboard-content-dash">
       {/* Top section */}

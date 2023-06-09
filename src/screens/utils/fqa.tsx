@@ -1,3 +1,13 @@
+import { useEffect } from "react";
+import { Maintenance } from "..";
+import { setupDocument } from "../../utils";
+
 export default function FQA() {
-  return <h1>FQA</h1>;
+  // useEffect(() => {
+  //   setupDocument({
+  //     title: "FQA",
+  //     singlePage: true,
+  //   });
+  // }, []);
+  return <Maintenance title="FQA" />;
 }

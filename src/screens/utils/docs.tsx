@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+import { setupDocument } from "../../utils";
+import { Maintenance } from "..";
+
 export default function Docs() {
-    return <h1>Docs</h1>;
-  }
-  
+  // useEffect(() => {
+  //   setupDocument({
+  //     title: "Docs",
+  //     singlePage: true,
+  //   });
+  // }, []);
+  return <Maintenance title="Docs" />;
+}

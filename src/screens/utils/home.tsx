@@ -11,8 +11,17 @@ import {
 } from "../../Components";
 import UnderlineKeyword from "../../Components/content/underlineKeyword";
 import { ROUTES } from "../../Config";
+import { setupDocument } from "../../utils";
+import { useEffect } from "react";
+import "../../styles/style.css";
 
 export default function Home() {
+  useEffect(() => {
+    setupDocument({
+      title: "Home",
+      singlePage: false,
+    });
+  }, []);
   return (
     <Main className="main-content" id="main-content">
       <Container className="body-container | flex | hero-section">

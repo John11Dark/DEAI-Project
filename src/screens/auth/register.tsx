@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { Container, Main } from "../../Components/";
 import SignUpForm from "../../Components/forms/customForms/signup";
+import { setupDocument } from "../../utils";
 
 export default function Register() {
   useEffect(() => {
-    document.title = "Register | DEAI";
-    document.documentElement.style.overflow = "hidden";
+    setupDocument({
+      title: "Register",
+      singlePage: true,
+    });
   }, []);
   return (
     <Main className="register-page | flex | center">

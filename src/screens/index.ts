@@ -7,6 +7,8 @@ export { default as Docs } from "./utils/docs";
 export { default as Contact } from "./utils/contact";
 export { default as NotFound } from "./utils/notFound";
 export { default as UtilsLayout } from "./utils/utilsLayout";
+export { default as Maintenance } from "./utils/underGoingMaintenance";
+export { default as Services } from "./utils/services";
 
 // ? Auth
 export { default as Login } from "./auth/login";

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
-import { setupDocument } from "../../utils";
 import { Maintenance } from "..";
+import { setupDocument } from "../../utils";
 
-export default function Docs() {
+export default function Services() {
   // useEffect(() => {
   //   setupDocument({
-  //     title: "Contact",
+  //     title: "Services",
   //     singlePage: true,
   //   });
   // }, []);
-  return <Maintenance title="Contact" />;
+  return <Maintenance title="Services" />;
 }
